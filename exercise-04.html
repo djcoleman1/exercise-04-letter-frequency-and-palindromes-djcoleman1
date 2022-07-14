@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Exercise #4 Letter Frequency & Palindromes</title>
+  </head>
+  <script>
+    // To run this code, simply right-click on this file from
+    // VSCode and select "Open with Live Server". You will need
+    // to have the Live Server extension installed.
+
+    // TODO #1:
+    function letterFrequency(str, char) {
+      let count = 0;
+      // Add your code here.
+      for (let i = 0; i < str.length; ++i) {
+        if (str[i] === char) {count += 1;}
+      }
+      return count;
+    }
+
+    // TODO #2:
+    function isPalindrome(str) {
+      // Add your code here
+      let ispalindrome = true;
+      let halfway = str.length/2;
+      if (str.length % 2 === 1) {
+        halfway = (str.length - 1) / 2;
+      }
+      for (let i = 0; i < halfway; ++i) {
+        if (str[i] !== str[str.length - (i + 1)]) {
+          ispalindrome = false;
+        }
+      }
+
+      return ispalindrome; // replace this line
+    }
+  </script>
+</html>
